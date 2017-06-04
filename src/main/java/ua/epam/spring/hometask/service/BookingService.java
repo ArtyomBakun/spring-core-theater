@@ -6,6 +6,7 @@ import java.util.Set;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
+import ua.epam.spring.hometask.domain.Auditorium;
 import ua.epam.spring.hometask.domain.Event;
 import ua.epam.spring.hometask.domain.Ticket;
 import ua.epam.spring.hometask.domain.User;
@@ -31,7 +32,7 @@ public interface BookingService {
      * @return total price
      */
     public double getTicketsPrice(@Nonnull Event event, @Nonnull LocalDateTime dateTime, @Nullable User user,
-            @Nonnull Set<Long> seats);
+                                  @Nonnull Auditorium auditorium, @Nonnull Set<Long> seats);
 
     /**
      * Books tickets in internal system. If user is not
