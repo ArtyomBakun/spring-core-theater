@@ -17,7 +17,8 @@ public interface AuditoriumService {
      * 
      * @return set of all auditoriums
      */
-    public @Nonnull Set<Auditorium> getAll();
+    public @Nonnull
+    Set<Auditorium> getAll();
 
     /**
      * Finding auditorium by name
