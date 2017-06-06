@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+      http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+  <import resource="dao.xml"/>
+
+  <bean id="auditoriumService" class="ua.epam.spring.hometask.service.impl.AuditoriumServiceImpl">
+    <constructor-arg ref="auditoriumDao"/>
+  </bean>
+
+  <bean id="userService" class="ua.epam.spring.hometask.service.impl.UserServiceImpl">
+    <property name="dao" ref="userDao"/>
+  </bean>
+
+  <bean id="eventService" class="ua.epam.spring.hometask.service.impl.EventServiceImpl">
+    <property name="dao" ref="eventDao"/>
+  </bean>
+
+  <bean id="bookingService" class="ua.epam.spring.hometask.service.impl.BookingServiceImpl">
+    <constructor-arg ref="discountService"/>
+    <property name="dao" ref="bookingDao"/>
+  </bean>
+  
+  <bean id="discountService" class="ua.epam.spring.hometask.service.impl.DiscountServiceImpl">
+    <property name="strategies">
+      <list>
+        <value type="ua.epam.spring.hometask.domain.DiscountStrategy">BIRTHDAY_STRATEGY</value>
+        <value type="ua.epam.spring.hometask.domain.DiscountStrategy">TEN_TICKET_STRATEGY</value>
+      </list>
+    </property>
+  </bean>
+
+</beans>

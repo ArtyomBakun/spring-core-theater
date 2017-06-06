@@ -13,6 +13,7 @@ import java.util.List;
  * Created by artyom on 03.06.17.
  */
 public class UserDaoImpl implements UserDao {
+    
     private static List<User> users = new ArrayList<>();
 
     @Nullable
@@ -37,7 +38,7 @@ public class UserDaoImpl implements UserDao {
     @Override
     public User getById(@Nonnull Long id) {
         return users.stream()
-                .filter(u -> u.getId() == id)
+                .filter(u -> u.getId().equals(id))
                 .findFirst()
                 .orElse(null);
     }

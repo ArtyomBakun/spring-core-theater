@@ -15,6 +15,11 @@ public class AuditoriumServiceImpl implements AuditoriumService {
 
     private AuditoriumDao dao;
 
+    public AuditoriumServiceImpl(AuditoriumDao dao)
+    {
+        this.dao = dao;
+    }
+
     @Nonnull
     @Override
     public Set<Auditorium> getAll() {

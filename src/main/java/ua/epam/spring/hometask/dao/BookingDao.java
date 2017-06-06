@@ -4,6 +4,7 @@ import ua.epam.spring.hometask.domain.Auditorium;
 import ua.epam.spring.hometask.domain.Event;
 import ua.epam.spring.hometask.domain.Ticket;
 import ua.epam.spring.hometask.domain.User;
+import ua.epam.spring.hometask.service.DiscountService;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -15,7 +16,8 @@ import java.util.Set;
  */
 public interface BookingDao {
     double getTicketsPrice(@Nonnull Event event, @Nonnull LocalDateTime dateTime, @Nullable User user,
-                           @Nonnull Auditorium auditorium, @Nonnull Set<Long> seats);
+                           @Nonnull Auditorium auditorium, @Nonnull Set<Long> seats,
+            @Nonnull DiscountService discountService);
 
     void bookTickets(@Nonnull Set<Ticket> tickets);
 

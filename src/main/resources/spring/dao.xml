@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+      http://www.springframework.org/schema/beans
+      http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+      <import resource="auditorium-beans.xml"/>
+  
+  <bean id="auditoriumDao" class="ua.epam.spring.hometask.dao.impl.AuditoriumDaoImpl">
+    <property name="auditoriums">
+      <set>
+        <ref bean="aud1"/>
+        <ref bean="aud2"/>
+      </set>
+    </property>
+  </bean>
+  
+  <bean id="userDao" class="ua.epam.spring.hometask.dao.impl.UserDaoImpl">
+    <property name="users">
+      <list/>
+    </property>
+  </bean>
+  
+  <bean id="eventDao" class="ua.epam.spring.hometask.dao.impl.EventDaoImpl">
+    <property name="events">
+      <list/>
+    </property>
+  </bean>
+
+  <bean id="bookingDao" class="ua.epam.spring.hometask.dao.impl.BookingDaoImpl"/>
+  
+</beans>
