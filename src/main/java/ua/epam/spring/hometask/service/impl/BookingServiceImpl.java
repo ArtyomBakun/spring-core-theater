@@ -1,5 +1,7 @@
 package ua.epam.spring.hometask.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import ua.epam.spring.hometask.dao.BookingDao;
 import ua.epam.spring.hometask.domain.Auditorium;
 import ua.epam.spring.hometask.domain.Event;
@@ -16,11 +18,14 @@ import java.util.Set;
 /**
  * Created by artyom on 04.06.17.
  */
+@Component
 public class BookingServiceImpl implements BookingService
 {
     private DiscountService discountService;
+    @Autowired
     private BookingDao dao;
 
+    @Autowired
     public BookingServiceImpl(DiscountService discountService)
     {
         this.discountService = discountService;

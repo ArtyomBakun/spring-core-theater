@@ -1,5 +1,7 @@
 package ua.epam.spring.hometask.dao.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import ua.epam.spring.hometask.dao.UserDao;
 import ua.epam.spring.hometask.domain.User;
 
@@ -12,8 +14,10 @@ import java.util.List;
 /**
  * Created by artyom on 03.06.17.
  */
+@Component
 public class UserDaoImpl implements UserDao {
-    
+
+    @Autowired
     private static List<User> users = new ArrayList<>();
 
     @Nullable

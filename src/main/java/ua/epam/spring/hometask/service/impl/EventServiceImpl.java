@@ -1,5 +1,7 @@
 package ua.epam.spring.hometask.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import ua.epam.spring.hometask.dao.EventDao;
 import ua.epam.spring.hometask.domain.Event;
 import ua.epam.spring.hometask.service.EventService;
@@ -11,8 +13,10 @@ import java.util.Collection;
 /**
  * Created by artyom on 03.06.17.
  */
+@Component
 public class EventServiceImpl implements EventService {
 
+    @Autowired
     private EventDao dao;
 
     @Nullable

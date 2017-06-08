@@ -1,5 +1,7 @@
 package ua.epam.spring.hometask.dao.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import ua.epam.spring.hometask.dao.AuditoriumDao;
 import ua.epam.spring.hometask.domain.Auditorium;
 
@@ -11,8 +13,10 @@ import java.util.Set;
 /**
  * Created by artyom on 03.06.17.
  */
+@Component
 public class AuditoriumDaoImpl implements AuditoriumDao{
 
+    @Autowired
     private static Set<Auditorium> auditoriums = new HashSet<>();
 
     @Nonnull
