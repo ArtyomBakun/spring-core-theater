@@ -79,58 +79,6 @@ public class AppContext {
         return new TenTicketStrategy();
     }
 
-//    @Bean
-//    public AuditoriumDaoImpl auditoriumDao(){
-//        AuditoriumDaoImpl dao = new AuditoriumDaoImpl();
-//        Set<Auditorium> auditoriums = new HashSet<>();
-//        auditoriums.add(aud1());
-//        dao.setAuditoriums(auditoriums);
-//        return dao;
-//    }
-//
-//    @Bean
-//    public UserDaoImpl userDao(){
-//        return new UserDaoImpl();
-//    }
-//
-//    @Bean
-//    public EventDaoImpl eventDao(){
-//        return new EventDaoImpl();
-//    }
-//
-//    @Bean
-//    public BookingDaoImpl bookingDao(){
-//        return new BookingDaoImpl();
-//    }
-
-//    @Bean
-//    public AuditoriumServiceImpl auditoriumService(){
-//        AuditoriumServiceImpl service = new AuditoriumServiceImpl();
-//        service.setDao(auditoriumDao());
-//        return service;
-//    }
-//
-//    @Bean
-//    public UserServiceImpl userService(){
-//        UserServiceImpl service = new UserServiceImpl();
-//        service.setDao(userDao());
-//        return service;
-//    }
-//
-//    @Bean
-//    public EventServiceImpl eventService(){
-//        EventServiceImpl service = new EventServiceImpl();
-//        service.setDao(eventDao());
-//        return service;
-//    }
-//
-//    @Bean
-//    public BookingServiceImpl bookingService(){
-//        BookingServiceImpl service = new BookingServiceImpl(discountService());
-//        service.setDao(bookingDao());
-//        return service;
-//    }
-
     @Bean
     public DiscountServiceImpl discountService(){
         DiscountServiceImpl discountService = new DiscountServiceImpl();

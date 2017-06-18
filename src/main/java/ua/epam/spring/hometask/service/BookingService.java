@@ -54,4 +54,6 @@ public interface BookingService {
      */
     public @Nonnull Set<Ticket> getPurchasedTicketsForEvent(@Nonnull Event event, @Nonnull LocalDateTime dateTime);
 
+    DiscountService getDiscountService();
+
 }
