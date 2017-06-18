@@ -1,5 +1,7 @@
 package ua.epam.spring.hometask.domain;
 
+import org.springframework.stereotype.Component;
+
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.time.LocalDateTime;
@@ -7,6 +9,7 @@ import java.time.LocalDateTime;
 /**
  * Created by artyom on 04.06.17.
  */
+@Component
 public enum DiscountStrategy {
 
     BIRTHDAY_STRATEGY {

@@ -1,8 +1,6 @@
 package ua.epam.spring.hometask.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-import ua.epam.spring.hometask.domain.DiscountStrategy;
+import ua.epam.spring.hometask.domain.discount.DiscountStrategy;
 import ua.epam.spring.hometask.domain.Event;
 import ua.epam.spring.hometask.domain.User;
 import ua.epam.spring.hometask.service.DiscountService;
@@ -15,10 +13,8 @@ import java.util.List;
 /**
  * Created by artyom on 04.06.17.
  */
-@Component
 public class DiscountServiceImpl implements DiscountService {
 
-    @Autowired
     private List<DiscountStrategy> strategies;
 
     public List<DiscountStrategy> getStrategies() {
