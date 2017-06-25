@@ -11,5 +11,5 @@ import java.util.Collection;
  */
 public interface UserDao extends AbstractDao<User> {
     @Nullable
-    public User getUserByEmail(@Nonnull String email);
+    User getUserByEmail(@Nonnull String email);
 }

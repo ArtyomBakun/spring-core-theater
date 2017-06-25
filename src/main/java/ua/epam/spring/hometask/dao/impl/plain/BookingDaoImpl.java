@@ -1,4 +1,4 @@
-package ua.epam.spring.hometask.dao.impl;
+package ua.epam.spring.hometask.dao.impl.plain;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,13 +16,13 @@ import java.util.stream.Collectors;
 /**
  * Created by artyom on 04.06.17.
  */
-@Component
+//@Component
 public class BookingDaoImpl implements BookingDao
 {
 
     @Autowired
     private static Set<Ticket> bookedTickets = new HashSet<>();
-    private double vipCoeff = 2.0, highRatingCoeff = 1.2;
+    private final double vipCoeff = 2.0, highRatingCoeff = 1.2;
 
     @Override
     public double getTicketsPrice(

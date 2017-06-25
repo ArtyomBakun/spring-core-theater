@@ -7,7 +7,7 @@
 
       <import resource="auditorium-beans.xml"/>
   
-  <bean id="auditoriumDao" class="ua.epam.spring.hometask.dao.impl.AuditoriumDaoImpl">
+  <bean id="auditoriumDao" class="ua.epam.spring.hometask.dao.impl.plain.AuditoriumDaoImpl">
     <property name="auditoriums">
       <set>
         <ref bean="aud1"/>
@@ -16,18 +16,18 @@
     </property>
   </bean>
   
-  <bean id="userDao" class="ua.epam.spring.hometask.dao.impl.UserDaoImpl">
+  <bean id="userDao" class="ua.epam.spring.hometask.dao.impl.plain.UserDaoImpl">
     <property name="users">
       <list/>
     </property>
   </bean>
   
-  <bean id="eventDao" class="ua.epam.spring.hometask.dao.impl.EventDaoImpl">
+  <bean id="eventDao" class="ua.epam.spring.hometask.dao.impl.plain.EventDaoImpl">
     <property name="events">
       <list/>
     </property>
   </bean>
 
-  <bean id="bookingDao" class="ua.epam.spring.hometask.dao.impl.BookingDaoImpl"/>
+  <bean id="bookingDao" class="ua.epam.spring.hometask.dao.impl.plain.BookingDaoImpl"/>
   
 </beans>
